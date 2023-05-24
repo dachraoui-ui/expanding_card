@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+*{
+   box-sizing: border-box;
+}
+body{
+   margin: 0;
+   font-family: 'Muli',sans-serif;
+   display: flex;
+   align-items: center;
+   height: 100vh;
+   justify-content: center;
+   overflow: hidden;
+}
+.tunisian_beauty{
+   display:flex;
+   width:100vw;
+}
+.location {
+   background-repeat: no-repeat;
+   background-size: auto 100%;
+   background-position: center;
+   height: 80vh;
+   color: #ffffff;
+   cursor: pointer;
+   border-radius: 50px;
+   flex: 0.5;
+   margin: 10px;
+   transition:flex 0.7s ease-in;
+   position: relative;
+   overflow: hidden;
+}
+.location h3{
+   position: absolute;
+   bottom: 20px;
+   left: 60px;
+   font-size: 24px;
+   opacity: 0;
+}
+.location.active{
+   flex:5;
+}
+.location.active h3{
+   opacity: 1;
+   transition: opacity 0.3s ease-in 0.4s;
+}
+.location:nth-of-type(1) h3{
+   margin-left: 80px;
+}
+@media(max-width:480px){
+   .tunisian_beauty{
+      width:100vw;
+   }
+   .location:nth-of-type(4) ,.location:nth-of-type(5){
+      display:none;
+   }
+}
